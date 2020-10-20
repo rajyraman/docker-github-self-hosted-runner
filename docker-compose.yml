@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  dockergithubselfhostedrunner:
+    container_name: githubrunner
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: githubrunner:latest
+    env_file: actions.env
+
+    volumes:
+      - .\actions-runner:C:\actions-runner
