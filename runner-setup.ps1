@@ -1,6 +1,6 @@
 param (
 [string]$version = "2.273.5",
-[string]$repo = $(throw "Repo param is required. e.g. github/actions"),
+[string]$repo = $(throw "Repo param in the format owner/repo is required. e.g. github/actions"),
 [string]$gitHubPersonalAccessToken = $( Read-Host -asSecureString "Enter GitHub Personal Access Token" )
 )
 

@@ -1,5 +1,8 @@
 version: "3.7"
-
+networks:
+  default:
+    external:
+      name: nat
 services:
   dockergithubselfhostedrunner:
     container_name: githubrunner
@@ -8,6 +11,5 @@ services:
       dockerfile: Dockerfile
     image: githubrunner:latest
     env_file: actions.env
-
     volumes:
       - .\actions-runner:C:\actions-runner
